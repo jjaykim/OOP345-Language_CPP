@@ -1,0 +1,15 @@
+//==============================================
+// Name:           Jungjoo Kim
+// Student Number: 162 641 195
+// Email:          jkim594@myseneca.ca
+// Section:        NAA
+// Date:           May 29, 2021
+// Workshop:       Workshop1 - reflect
+//==============================================
+
+
+	In this workshop, I could clearly understand between external and internal linkage citing. Firstly, External linkage can be used not only in declared files but also in other external modules. Declare external linkage using the "extern" keyword. For example, in this workshop, I declared the g_sysClock variable in event.h file to use one global variable. On the other hand, internal linkage can only be used within declared bounds as opposed to external linkage. So, the internal linkage is not open to external files. Internal linkage is declared using the static keyword.
+
+	I used static keyword to implement “counter” variables in the display function. The reason is that I had to calculate how many times the display function is called in total. As a result of using it as a static variable, the counter variable was able to maintain life until the main function ended even after the function call ended.
+
+	I made some changes during part 2 of this workshop. I initially stored the description into an array of approximately large sizes, not the right size, but converted it to a pointer type. It was able to maintain the proper size without wasting memory in this area. However, I had to pay attention to memory leaks while using pointer types. As a result, I checked whether the pointer type variable is nullptr or not because to overwrite the other descriptions with it. Finally, I created the destructor to delete the memory safely.

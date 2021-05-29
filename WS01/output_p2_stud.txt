@@ -1,0 +1,59 @@
+Script started on Sat 29 May 2021 02:46:05 AM EDT
+==81866== Memcheck, a memory error detector
+==81866== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==81866== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==81866== Command: ws monday.txt tuesday.txt
+==81866== 
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Command Line:
+1: ws
+2: monday.txt
+3: tuesday.txt
+
+--------------------
+    Day 1
+--------------------
+ 1. 00:02:55 => Computer Starting
+ 2. 00:02:55 => Computer Starting
+ 3. | No Event |
+ 4. 01:15:34 => User logging in
+ 5. 01:20:09 => User logging in
+ 6. 09:01:04 => Browser closed
+ 7. 17:33:33 => User checks email
+--------------------
+    Day 2
+--------------------
+ 8. 01:02:23 => User starts working on homework
+ 9. | No Event |
+10. 01:20:34 => User take a break
+11. 01:22:30 => User plays sudoku
+12. 01:26:40 => User resumes homework
+--------------------
+    Archive
+--------------------
+13. | No Event |
+14. 01:20:00 => Authentication Failed
+15. 01:23:20 => Browser starts
+16. 09:01:04 => Browser closed
+17. 17:33:33 => User checks email
+18. 01:02:23 => User starts working on homework
+19. 01:22:30 => User plays sudoku
+20. | No Event |
+21. 01:26:40 => User resumes homework
+--------------------
+
+[38;5;9m------------------------
+End Testing the Program![0m
+==81866== 
+==81866== HEAP SUMMARY:
+==81866==     in use at exit: 0 bytes in 0 blocks
+==81866==   total heap usage: 30 allocs, 30 frees, 90,718 bytes allocated
+==81866== 
+==81866== All heap blocks were freed -- no leaks are possible
+==81866== 
+==81866== For lists of detected and suppressed errors, rerun with: -s
+==81866== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Sat 29 May 2021 02:46:06 AM EDT
