@@ -37,6 +37,11 @@ namespace sdds
     // check for self assignment
     if (this != &src) {
       this->e_Time = src.e_Time;
+      
+      if (this.e_Desc != nullptr) {
+        delete[] this.e_Desc;
+        this.e_Desc = nullptr;
+      }
 
       if (src.e_Desc != nullptr && src.e_Desc[0] != '\0') {
         this->e_Desc = new char[strlen(src.e_Desc) + 1];
