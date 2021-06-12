@@ -1,0 +1,12 @@
+//==============================================
+// Name:           Jungjoo Kim
+// Student Number: 162 641 195
+// Email:          jkim594@myseneca.ca
+// Section:        NAA
+// Date:           June 11, 2021
+// Workshop:       Workshop3
+//==============================================
+
+	During this workshop, I was able to practice and develop the template skills I learned last semester. To be honest, I was faced a lot of trouble during this workshop. However, as I dealt with and solved some challenges, I became closer to the template, and I wanted to take on other challenges. 
+
+	In this workshop, I felt complicated in implementing specializing in particular. I have specialized operatior+= function.  The PairSummable template class can be of many types, but I specifically specialized in the case of PairSummable<std:string, std::string>. This is because I need to concatenate strings with commas as delimiters differently adding the values of numeric type such as int or double.  Moreover, I got used to initializing the static variable. I used two static variables in PairSummable class, one is an unknown typed variable that holds the value and another one is a size_t type variable that holds the minimum field width. I needed to define these static variables outside the class because static variable cannot be initialized within a class. However, another problem is that I needed to initialize an “initial” variable that does not know the type. In addition, this variable has a role as default value in a parameter as PairSummable(const K& key, const V& value = initial). As a result, I used curly braces to initialize. The reason for that C++ provides uniform initialization, which works on all data types. Thus, initializing to {} results in default initialization. For example,  template<typename V, typename K> V PairSummable<V, K>::initial {};. In the same format, the size_t variable was initialized to {0u}. Lastly, in this workshop, I did not use any other cpp file except the main.cpp file because I have used template class at all header files. In other word, I have defined all function in only every header files. The reason is simple, if, as previous workshops, I declare a templet class in the header file and defines functions in the cpp file, the compiler cannot compile because it does not know the data type. A template is neither a class nor a function. Therefore, the declaration and definition of the template should be implemented at once so that the compiler can read it.
