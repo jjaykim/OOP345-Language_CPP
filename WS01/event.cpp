@@ -38,9 +38,9 @@ namespace sdds
     if (this != &src) {
       this->e_Time = src.e_Time;
       
-      if (this.e_Desc != nullptr) {
-        delete[] this.e_Desc;
-        this.e_Desc = nullptr;
+      if (this->e_Desc != nullptr) {
+        delete[] this->e_Desc;
+        this->e_Desc = nullptr;
       }
 
       if (src.e_Desc != nullptr && src.e_Desc[0] != '\0') {
