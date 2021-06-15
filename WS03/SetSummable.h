@@ -26,7 +26,7 @@ namespace sdds
     T accumulate(const std::string &filter) const {
       T _temp(filter);
 
-      for (auto i = 0u; i < N; ++i) {
+      for (auto i = 0u; i < this->size(); ++i) {
         if (_temp.isCompatibleWith(this->get(i)))
           _temp += this->get(i);
       }
