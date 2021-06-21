@@ -1,0 +1,13 @@
+//==============================================
+// Name:           		Jungjoo Kim
+// Student Number: 		162 641 195
+// Email:         		jkim594@myseneca.ca
+// Section:        		NAA
+// Date:           		June 20, 2021
+// Workshop:       		Workshop4 – Reflect
+//==============================================
+
+	I have learned a lot of new skills during this workshop. First, I have used various string functions so far, but this is the first time I have used “find_first_not_of()” and “find_last_not_of()” functions. It is true that I spent a lot of time dividing the strings I read in the file into formats. I made my own function and looked for a reference related to string function. Meanwhile, I was able to solve my problems right away by finding functions “find_first_not_of()” and “find_last_not_of()”.
+
+	I have an opportunity to learn the most important different types of class relationships in this workshop. I mainly used composition and aggregation relationship in this workshop. For sure, there was a difficulty in trying to understand the relationships between classes theoretically, but it was easier to understand when I saw it with my own eyes while coding. First of all, I used the relationship between restaurant class and Reservation class as a composition relationship. This is because the restaurant class has a pointer variable for the Reservation class (Reservation* m_listOfRes { nullptr };). And use that variable to manage the creation and destruction of reservation objects. This shows that the restaurant class has ownership of the reserved object, which is a feature of the composition relationship. Secondly, the aggregation relationships were used between ConfirmationSender and Reservation classes. Class ConfirmationSender has an array of pointer of Reservation class types as a member variable such as const Reservation** m_ptrListOfRes { nullptr };. This shows that ConfirmationSender class uses an array of pointer of Reservation but is not directly involved in the creation and destruction of Reservation class. The reason is only that it is implemented using address values. There are also differences in implementation in move and copy constructor as the relationship between classes varies. In a composition relationship, the object will be destroyed in the move and copy constructor. However, there is no destruction of objects in aggregation relationships. It is just to delete the address of the pointer of Reservation.
+	
