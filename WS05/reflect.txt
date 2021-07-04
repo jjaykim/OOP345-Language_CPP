@@ -1,0 +1,16 @@
+//==============================================
+// Name:           Jungjoo Kim
+// Student Number: 162 641 195
+// Email:          jkim594@myseneca.ca
+// Section:        NAA
+// Date:           June 27, 2021
+// Workshop:       Workshop5 – Reflect
+//==============================================
+
+	In this workshop, I had the opportunity to learn and use more than in previous workshops. First, I implemented functional objects and lambda expressions. A functor is an object that literally acts like a function. A functor is a faster and better performance than normal functions. And most of all, it has the characteristics of storing states, so it can be used much more diversely than normal functions. Therefore, function objects are used when I need a function that must have a state. I use a functor in this workshop as void SpellChecker::operator()(std::string& text) in SpellChecker class. However, lambda expressions have only the advantages of functor and function pointers. The reason is that once a functor is implemented, it must define a class or structure, but Lambda does not. In addition, lambda expression does not require an identifier, and is used in the local area of an application. It is also possible to inline, the biggest advantage, and to handle variables in various forms within the capture block. Therefore, if I want to write my code concisely and readably and want to implement a function with good performance, I should better use the lambda function. I implemented lambda expression in this workshop as auto exchagRate = [&](Book& _book).
+
+	I generated an exception under certain conditions while generating a class instruction in SpellChecker such as throw "Bad file name!". However, if the constructor did not have an exception, I would have to add a step to output an error message when the file was not read and reset the member variable to its default value. I personally think it is good to make an exception. The reason for this is that it is impossible to predict what exceptions will occur while implementing the code, so it would be good to check messages using exception processing to check messages.
+
+	Movie and Book class have almost the same logic as loading data from a file. If I will avoid code duplication, it may be possible to create a new module and create a virtual function that loads files in it. Since the number of member variables is different from each other, it would be good to overload functions called differently depending on the number of member variables. Alternatively, a function that duplicates within each function can be made into a lambda function to make it look neat.
+
+	Movie and Book class do not have default constructors, only custom constructors. Personally, I think this is a very big risk. The reason is that compilation errors occur if classes are instantiated without any parameters. Therefore, although it is not possible to prepare for all situations, it is safe to at least implement the default constructor and initialize the member variables to a safe value.
