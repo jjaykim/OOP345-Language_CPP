@@ -1,0 +1,71 @@
+Script started on Fri 09 Jul 2021 12:22:41 AM EDT
+==232768== Memcheck, a memory error detector
+==232768== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==232768== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==232768== Command: ws dataClean.txt dataMessy.txt
+==232768== 
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Command Line:
+--------------------------
+  1: ws
+  2: dataClean.txt
+  3: dataMessy.txt
+--------------------------
+
+--------------------------------
+| Cars in the autoshop!        |
+--------------------------------
+|     Toyota | new    | 157.00 |
+|     Jaguar | used   | 295.20 |*
+|      Honda | broken | 145.00 |
+|     Porche | used   | 365.40 |*
+|   Chrysler | new    | 173.00 |
+--------------------------------
+
+Invalid record!
+Invalid record!
+Unrecognized record type: [t]
+--------------------------------
+| Cars in the autoshop!        |
+--------------------------------
+|     Toyota | new    | 157.00 |
+|     Jaguar | used   | 295.20 |*
+|      Honda | broken | 145.00 |
+|     Porche | used   | 365.40 |*
+|   Chrysler | new    | 173.00 |
+| Alfa Romeo | new    | 176.00 |
+|       Ford | new    | 162.00 |
+|   Red Bull | broken | 346.56 |*
+|    Ferrari | new    | 367.33 |*
+--------------------------------
+
+--------------------------------
+|       Fast Vehicles          |
+--------------------------------
+|     Porche | used   | 365.40 |*
+|   Red Bull | broken | 346.56 |*
+|    Ferrari | new    | 367.33 |*
+--------------------------------
+
+--------------------------------
+| Vehicles in need of repair   |
+--------------------------------
+|      Honda | broken | 145.00 |
+|   Red Bull | broken | 346.56 |*
+--------------------------------
+
+[38;5;9m------------------------
+End Testing the Program![0m
+==232768== 
+==232768== HEAP SUMMARY:
+==232768==     in use at exit: 0 bytes in 0 blocks
+==232768==   total heap usage: 53 allocs, 53 frees, 92,717 bytes allocated
+==232768== 
+==232768== All heap blocks were freed -- no leaks are possible
+==232768== 
+==232768== For lists of detected and suppressed errors, rerun with: -s
+==232768== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Fri 09 Jul 2021 12:22:42 AM EDT
