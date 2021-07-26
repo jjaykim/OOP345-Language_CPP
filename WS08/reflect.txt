@@ -1,0 +1,19 @@
+//==============================================
+// Name:           Jungjoo Kim
+// Student Number: 162 641 195
+// Email:          jkim594@myseneca.ca
+// Section:        NAA
+// Date:           July 20, 2021
+// Workshop:       Workshop 8 - Reflect
+//==============================================
+
+	Through this workshop, I had a chance to learn smart pointers that I had never encountered before. First of all, smart pointers are a very smart function. Introduced in C++11, a total of three smart pointers, which are “unique_ptr”, “shared_ptr” and “weak_ptr”, are commercialized, defined in the <memory> header file. However, in this workshop, I focused on only using and practicing “unique_ptr” like “unique_ptr<Product> temp(new Product(desc[i].desc, price[j].price));” in Utilities.cpp. First of all, there are great advantages of using smart pointers. So far, I have had a hard time finding memory leaks during debugging when using pointers in C or C++. However, smart pointers save me from memory leaks. The reason is that smart pointers are class templates that act like pointers, which automatically release memory when the end of use. It is the same process as automatically invoking the destructor after the use of a class. Therefore, in “mergeSmart” function, it is used to create temporary smart pointers pointing to Product objects and store them in list container “priceList”. This Smart Pointer then automatically releases memory by invoking destructor defined in the Product structure in “Element.h” because it no longer has a reason to use any more.
+
+	There is a noticeable difference between using raw pointer and using smart pointer. First of all, if I use raw pointer to make a temporary object and store it in a container, I must not forget to release the temporary object's memory directly. If I miss this process, I am stuck in a memory leak. However, if I do the same thing as above using smart pointer, I do not have to release the memory directly. Because the smart pointer releases the memory on its own. Although the length of code that needs to be implemented using raw or smart pointer does not very much, as a result, there are significant differences in debugging.
+
+
+
+
+
+
+	

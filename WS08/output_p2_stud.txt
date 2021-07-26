@@ -1,0 +1,104 @@
+Script started on Fri 23 Jul 2021 11:49:02 AM EDT
+==61541== Memcheck, a memory error detector
+==61541== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==61541== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==61541== Command: ws Descriptions.dat BadPrices.dat Prices.dat
+==61541== 
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Command Line: ws Descriptions.dat BadPrices.dat Prices.dat
+
+ Code Description
+ 4662    tomatoes
+ 4039   cucumbers
+ 4056     brocoli
+ 4067      lemons
+ 4068     oranges
+
+********************************************
+* Good Prices
+********************************************
+ Code   Price
+ 4067    0.99
+ 4068    0.67
+ 4039    1.99
+ 4056    2.49
+
+********************************************
+* Bad Prices
+********************************************
+ Code   Price
+ 4067    0.99
+ 4068    0.67
+ 4039    1.99
+ 4056   -2.49
+
+********************************************
+* Merging bad prices using Raw Pointers
+********************************************
+     C [1]
+    CC [2] from [1]
+    ~D [1]
+     C [3]
+    ~D [2]
+ERROR: *** Negative prices are invalid ***
+NOTE: An exception occurred while creating the list of products!
+      You should notice that not all objects are deleted.
+
+********************************************
+* Merging bad prices using Smart Pointers
+********************************************
+     C [4]
+    CC [5] from [4]
+    ~D [4]
+     C [6]
+    ~D [6]
+    ~D [5]
+ERROR: *** Negative prices are invalid ***
+NOTE: An exception occurred while creating the list of products!
+      You should notice that ALL objects are deleted.
+
+
+********************************************
+* Merging good prices using Raw Pointers
+********************************************
+ Description   Price
+   cucumbers    1.99
+     brocoli    2.49
+      lemons    0.99
+     oranges    0.67
+
+********************************************
+* Merging good prices using Smart Pointers
+********************************************
+ Description   Price
+   cucumbers    1.99
+     brocoli    2.49
+      lemons    0.99
+     oranges    0.67
+
+
+[38;5;9m------------------------
+End Testing the Program![0m
+==61541== 
+==61541== HEAP SUMMARY:
+==61541==     in use at exit: 48 bytes in 1 blocks
+==61541==   total heap usage: 49 allocs, 48 frees, 102,000 bytes allocated
+==61541== 
+==61541== 48 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==61541==    at 0x4C2A593: operator new(unsigned long) (vg_replace_malloc.c:344)
+==61541==    by 0x40574D: sdds::mergeRaw(sdds::List<sdds::Description> const&, sdds::List<sdds::Price> const&) (Utilities.cpp:32)
+==61541==    by 0x4024B8: main (w8_p2_prof.cpp:58)
+==61541== 
+==61541== LEAK SUMMARY:
+==61541==    definitely lost: 48 bytes in 1 blocks
+==61541==    indirectly lost: 0 bytes in 0 blocks
+==61541==      possibly lost: 0 bytes in 0 blocks
+==61541==    still reachable: 0 bytes in 0 blocks
+==61541==         suppressed: 0 bytes in 0 blocks
+==61541== 
+==61541== For lists of detected and suppressed errors, rerun with: -s
+==61541== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+
+Script done on Fri 23 Jul 2021 11:49:03 AM EDT
