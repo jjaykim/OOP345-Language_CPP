@@ -1,0 +1,25 @@
+//==============================================
+// Name:           Jungjoo Kim
+// Student Number: 162 641 195
+// Email:          jkim594@myseneca.ca
+// Section:        NAA
+// Date:           July 29, 2021
+// Workshop:       Project 3
+//==============================================
+
+	I think the milestone I completed this time was the most difficult project during the CPA course. First, I needed a very long time to understand the overall logic. Frankly, I didn't find it difficult to complete Milestones 1 and 2 without a complete understanding of Logic. However, in Milestone 3, I learned the most important thing. It is very dangerous and difficult to proceed without knowing the whole process while working on a project. As a result, I had to review 1 and 2 as I progressed to Milestone 3, and I was able to implement 3 by understanding the overall process.
+
+	Throughout this milestone, I got used to STL containers and algorithms a lot and got used to them. And it was fun to implement the link-list algorithm using the container. The most interesting part was when the "attemptToMoveOrder" function in the "Workstation" file was implemented. The reason is that I invested a lot of time, and I found errors through debugging and eventually came up with solutions. The part where I was stuck was the part where I added the user's order to the "completed" or "imcompleted" container after checking whether the status of the item is filled or not. However, I had to put Rania's order in "imcompleted" container but I misunderstood the instruction. So that it was saved in "Completed" container. This part could be fixed through debugging by checking the values of the variables line by line.
+
+How did I fixed: 
+else if (!m_orders.front().isFilled())
+  incomplete.push_back(std::move(m_orders.front()));
+else
+  completed.push_back(std::move(m_orders.front()));
+
+
+	Finally, the challenge of using STL algorithms instead of basic a loop statement, such as for or while, in LineManager constructor interested me. As a result of a lot of practice and study at the last workshop, this challenge was not that difficult. Thanks to this, there was an opportunity to practice implementing using STL algorithms not only in the LineManager constructor but also in other functions. For example, "run" or "display" function in LineManager.cpp
+
+run function: for (auto src : activeLine)  (That is the range-based for statement)
+display function : for_each(activeLine.begin(), activeLine.end(), [&](Workstation* src)
+
