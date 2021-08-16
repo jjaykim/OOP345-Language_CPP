@@ -1,0 +1,22 @@
+//==============================================
+// Name:            Jungjoo Kim
+// Student Number:  162 641 195
+// Email:           jkim594@myseneca.ca
+// Section:         NAA
+// Date:            July 29, 2021
+// Workshop:        Workshop 9 - reflect
+//==============================================
+
+	I had time to read new features of C++ during this workshop such as thread or bind. First of all, I dealt with the input and output of files in this workshop, but I used binary files differently than usual. The difference between a basic file and a binary file is whether the user can see the contents with his or her eyes when opening the file. This difference is why I used this binary file in this workshop. Because it had to store secure data, it was saved in binary form so that users could not easily read the file. I added a new argument to read or write binary files in the ifstream and ofstream. "ios::binary" specifies that the file should be read or write in binary form. For example “ifstream read_file(file, ios::binary);” and “ofstream out_file(file, ios::binary);”. Also, because binary files use ASCII, they are fast in terms of speed and can be reduced in memory usage.
+
+	I used "std::bind" for the first time, and the most important thing was to match the arguments well. First, std::bind is a function that allows some parameters of a function to be set to a fixed value and then once wrapped to be used. To do so, put the function and the corresponding arguments in std::bind. Because the function is wrapped and declared in one variable, an error occurs if arguments are not matched. I used function "converter" using std::bind in this workshop like “bind(converter, text + (i * eachPart), key, i < numOfThread - 1 ? eachPart : nbytes - eachPart, Cryptor())));”
+
+	Finally, I used "thread". the thread was familiar because I had used it before. The computer executes the program I ordered sequentially. However, it is the tread that commands a computer to use multiple processes to perform multiple tasks at the same time. This process reduces memory space and system resource consumption once it is done at once. And even if one thread terminates the task, the other continues to perform the task. I used a vector container to store thread as data type to use thread in this workshop.  A total of four threads were implemented, and join() function was used to allow all threads to wait for the parent thread to complete the task.
+
+vector<thread> c_thread;
+for (auto i = 0u; i < numOfThread; ++i)
+     c_thread.push_back(thread(bind(converter, text + (i * eachPart), key,
+        i < numOfThread - 1 ? eachPart : nbytes - eachPart, Cryptor())));
+
+for (auto i = 0u; i < numOfThread; ++i)
+      c_thread[i].join();

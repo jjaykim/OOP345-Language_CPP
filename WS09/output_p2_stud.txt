@@ -1,0 +1,72 @@
+Script started on Wed 28 Jul 2021 02:02:38 PM EDT
+==79254== Memcheck, a memory error detector
+==79254== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==79254== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==79254== Command: ws input.txt encoded.dat.txt K
+==79254== 
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Command Line: ws input.txt encoded.dat.txt K
+
+
+1935 bytes copied from file input.txt into memory (null byte added)
+Data encrypted in memory
+
+1936 bytes copied from binary file encoded.dat.txt into memory.
+Data decrypted in memory
+
+C++ is a general-purpose programming language created by 
+Bjarne Stroustrup as an extension of the C programming language, 
+or "C with Classes". The language has expanded significantly 
+over time, and modern C++ has object-oriented, generic, 
+and functional features in addition to facilities for 
+low-level memory manipulation. It is almost always 
+implemented as a compiled language, and many vendors provide 
+C++ compilers, including the Free Software Foundation, LLVM, 
+Microsoft, Intel, Oracle, and IBM, so it is available on 
+many platforms.
+
+C++ was designed with a bias toward system programming and 
+embedded, resource-constrained software and large systems, 
+with performance, efficiency, and flexibility of use as its 
+design highlights. C++ has also been found useful in many 
+other contexts, with key strengths being software 
+infrastructure and resource-constrained applications, 
+including desktop applications, servers (e.g. e-commerce, 
+Web search, or SQL servers), and performance-critical 
+applications (e.g. telephone switches or space probes).
+
+C++ is standardized by the International Organization for 
+Standardization (ISO), with the latest standard version 
+ratified and published by ISO in December 2017 as 
+ISO/IEC 14882:2017 (informally known as C++17). The C++ 
+programming language was initially standardized in 1998 
+as ISO/IEC 14882:1998, which was then amended by the 
+C++03, C++11 and C++14 standards. The current C++17 
+standard supersedes these with new features and an 
+enlarged standard library. Before the initial 
+standardization in 1998, C++ was developed by Danish 
+computer scientist Bjarne Stroustrup at Bell Labs 
+since 1979 as an extension of the C language; he 
+wanted an efficient and flexible language similar to C 
+that also provided high-level features for program 
+organization. C++20 is the next planned standard, 
+keeping with the current trend of a new version every 
+three years.
+
+
+
+[38;5;9m------------------------
+End Testing the Program![0m
+==79254== 
+==79254== HEAP SUMMARY:
+==79254==     in use at exit: 0 bytes in 0 blocks
+==79254==   total heap usage: 27 allocs, 27 frees, 105,528 bytes allocated
+==79254== 
+==79254== All heap blocks were freed -- no leaks are possible
+==79254== 
+==79254== For lists of detected and suppressed errors, rerun with: -s
+==79254== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Wed 28 Jul 2021 02:02:39 PM EDT
